@@ -1,0 +1,1079 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "subscriber.tenureband": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "TenureBand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tenure": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.market": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "Market"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Market": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.handsetageband": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "HandsetAgeBand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Handset age": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.arpuband": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "ARPUBand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Monthly revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.usagetrend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "UsageTrend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Usage trend": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.careband": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "CareBand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Care calls": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.retentioncontact": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "RetentionContact"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Retention contact": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.dropband": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "DropBand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dropped or blocked calls": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.creditclass": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "CreditClass"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Credit rating": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.riskdecile": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "RiskDecile"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Risk decile": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Risk decile (1 = highest)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "subscriber.valuedecile": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Subscriber",
+			          "ConceptualProperty": "ValueDecile"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Revenue-at-risk decile": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churn_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churn Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn rate": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Churn rate (sample)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.subscribers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Subscribers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Subscribers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.arpu": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "ARPU"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ARPU": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "ARPU, monthly": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churn_index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churn Index"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn index": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.revenue_at_risk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Revenue at Risk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Revenue at risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Monthly revenue at risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.minutes_per_subscriber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Minutes per Subscriber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Minutes per subscriber": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.avg_tenure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Avg Tenure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Average tenure, months": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.avg_dropped_blocked": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Avg Dropped Blocked"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dropped or blocked calls / month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.avg_care_calls": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Avg Care Calls"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Care calls / month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churn_heavy_care": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churn Heavy Care"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn, 5+ care calls": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churn_old_handset": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churn Old Handset"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn, handset 18+ months": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churn_new_handset": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churn New Handset"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn, handset under 6 months": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churn_retention_callers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churn Retention Callers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn, called retention": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.driver_importance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Driver Importance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AUC drop": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.test_churn_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Test Churn Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Actual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Churn rate": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.test_predicted_churn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Test Predicted Churn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Predicted": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.holdout_auc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Hold-out AUC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Hold-out AUC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.logistic_auc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Logistic AUC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Logistic benchmark": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.top_decile_churn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Top Decile Churn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn, top risk decile": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.top_decile_lift": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Top Decile Lift"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Top-decile lift": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.top_30_churner_capture": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Top 30 Churner Capture"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churners in top 30%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.revenue_capture_by_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Revenue Capture by Value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churned revenue in top 30% (value)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ranked by revenue at risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.revenue_capture_by_risk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Revenue Capture by Risk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ranked by churn risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.test_subscribers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Test Subscribers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Subscribers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.best_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Best Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Best share at these assumptions": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.retention_roi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Retention ROI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Return on offer spend": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.targeted": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Targeted"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Subscribers offered": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churners_reached": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churners Reached"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Would-be churners reached": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.saves": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Saves"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Saves": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.revenue_retained": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Revenue Retained"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Revenue retained, 12 months": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.offer_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Offer Spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Offer spend": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.net_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Net Value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Net value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.net_by_value_ranking": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Net by Value Ranking"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rank by revenue at risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.net_by_risk_ranking": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Net by Risk Ranking"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rank by churn risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi.churned_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "KPI",
+			          "ConceptualProperty": "Churned Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churned revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn_drivers.driver": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn Drivers",
+			          "ConceptualProperty": "Driver"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Driver": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "share_axis.share_axis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Share Axis",
+			          "ConceptualProperty": "Share Axis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Share of base offered a deal, %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

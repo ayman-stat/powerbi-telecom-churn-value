@@ -1,0 +1,15 @@
+table 'Share Axis'
+	lineageTag: 15af5f47-055e-4c14-9def-26eb99a5a61b
+
+	/// Share of the base targeted, % (chart axis)
+	column 'Share Axis'
+		dataType: int64
+		formatString: 0
+		lineageTag: f666e7e9-1ee6-499c-bbe0-34a957917e12
+		summarizeBy: none
+		sourceColumn: [Value]
+
+	partition 'Share Axis' = calculated
+		mode: import
+		source = GENERATESERIES(10, 100, 10)
+

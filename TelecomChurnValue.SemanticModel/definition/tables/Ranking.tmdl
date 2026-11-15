@@ -1,0 +1,23 @@
+table Ranking
+	lineageTag: f0379d70-235d-42b4-9794-488b691c7dbd
+
+	/// How subscribers are ordered for targeting
+	column Ranking
+		dataType: string
+		lineageTag: cd0b2d96-d462-45d6-91fc-ddc1257c4073
+		summarizeBy: none
+		sourceColumn: [Ranking]
+		sortByColumn: 'Ranking Order'
+
+	column 'Ranking Order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0893c8fe-7061-4b18-87b8-5434f8f82ed9
+		summarizeBy: none
+		sourceColumn: [Ranking Order]
+
+	partition Ranking = calculated
+		mode: import
+		source = DATATABLE("Ranking", STRING, "Ranking Order", INTEGER, {{"By revenue at risk", 1}, {"By churn risk", 2}})
+

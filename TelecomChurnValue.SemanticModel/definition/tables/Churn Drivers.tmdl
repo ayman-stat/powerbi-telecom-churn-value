@@ -1,0 +1,28 @@
+table 'Churn Drivers'
+	lineageTag: 332af44b-f4a4-4d7c-af0c-259384f24c0f
+
+	column Driver
+		dataType: string
+		lineageTag: aaf132c4-1d13-41da-b9a6-069cbada64d2
+		summarizeBy: none
+		sourceColumn: Driver
+
+	column AUCDrop
+		dataType: double
+		isHidden
+		formatString: 0.000
+		lineageTag: 65bebdd6-7039-4d95-a8f0-c2bb041fedb3
+		summarizeBy: none
+		sourceColumn: AUCDrop
+
+	partition 'Churn Drivers' = m
+		mode: import
+		source =
+				let
+				    Source = fnLoadCsv("churn_drivers.csv"),
+				    Typed = Table.TransformColumnTypes(Source, {{"Driver", type text}, {"AUCDrop", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

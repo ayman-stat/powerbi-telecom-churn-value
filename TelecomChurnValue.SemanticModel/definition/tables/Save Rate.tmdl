@@ -1,0 +1,15 @@
+table 'Save Rate'
+	lineageTag: c4dcac67-9e2b-4263-aa01-6067396c915e
+
+	/// Share of would-be churners an offer keeps
+	column 'Save Rate'
+		dataType: double
+		formatString: 0%
+		lineageTag: 138a033b-3a7f-4076-8a6e-7d0ccceefa04
+		summarizeBy: none
+		sourceColumn: [Save Rate]
+
+	partition 'Save Rate' = calculated
+		mode: import
+		source = DATATABLE("Save Rate", DOUBLE, {{0.1}, {0.2}, {0.3}, {0.4}})
+

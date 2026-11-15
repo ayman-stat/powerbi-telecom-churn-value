@@ -1,0 +1,257 @@
+/// All report measures, organised in display folders.
+table KPI
+	lineageTag: 68be48d9-b2e3-4932-9219-85cf834ad8b9
+
+	measure Subscribers = COUNTROWS('Subscriber')
+		formatString: #,0
+		displayFolder: 1 Base
+		lineageTag: 6ba58fe3-f314-4ac8-8f02-21840ea3ad03
+
+	/// Share of subscribers who churned. The source over-represents churners: read as relative risk.
+	measure 'Churn Rate' = AVERAGE('Subscriber'[Churned])
+		formatString: 0.0%
+		displayFolder: 1 Base
+		lineageTag: 96cd4e5b-8631-4667-972d-14850ede2a8f
+
+	/// Average monthly revenue per subscriber.
+	measure ARPU = AVERAGE('Subscriber'[MonthlyRevenue])
+		formatString: $0.00
+		displayFolder: 1 Base
+		lineageTag: 225fab78-3344-46cc-90ad-9e6d740e8ebb
+
+	measure 'Monthly Revenue' = SUM('Subscriber'[MonthlyRevenue])
+		formatString: $#,0
+		displayFolder: 1 Base
+		lineageTag: fefc1923-efd9-4e3d-b3b5-927c44df5547
+
+	measure 'Minutes per Subscriber' = AVERAGE('Subscriber'[MonthlyMinutes])
+		formatString: #,0
+		displayFolder: 1 Base
+		lineageTag: 115e6d4c-4ed9-4621-9000-edf56883b929
+
+	/// Months in service.
+	measure 'Avg Tenure' = AVERAGE('Subscriber'[MonthsInService])
+		formatString: 0.0
+		displayFolder: 1 Base
+		lineageTag: 32f3f4ca-2ac9-4b7c-8a48-e938de1e3560
+
+	/// Churn probability x monthly revenue: the monthly revenue in play.
+	measure 'Revenue at Risk' = SUMX('Subscriber', 'Subscriber'[ChurnScore] * 'Subscriber'[MonthlyRevenue])
+		formatString: $#,0
+		displayFolder: 1 Base
+		lineageTag: e1378c7f-336b-4ce8-91f8-e5f1a453817a
+
+	/// Monthly revenue of subscribers who left.
+	measure 'Churned Revenue' = CALCULATE(SUM('Subscriber'[MonthlyRevenue]), 'Subscriber'[Churned] = 1)
+		formatString: $#,0
+		displayFolder: 1 Base
+		lineageTag: 4bff3041-63dc-478b-9d06-61d6228b90f6
+
+	/// Churn rate vs the whole base (100 = average).
+	measure 'Churn Index' = DIVIDE([Churn Rate], CALCULATE([Churn Rate], ALL('Subscriber'))) * 100
+		formatString: 0
+		displayFolder: 1 Base
+		lineageTag: d12aa84f-b5e9-405f-bc72-72e7d27711c7
+
+	/// Dropped or blocked calls per subscriber per month.
+	measure 'Avg Dropped Blocked' = AVERAGE('Subscriber'[DroppedBlockedCalls])
+		formatString: 0.0
+		displayFolder: 2 Experience
+		lineageTag: 5aa64f4c-c8df-496f-afec-78e2acd69d23
+
+	measure 'Avg Care Calls' = AVERAGE('Subscriber'[CustomerCareCalls])
+		formatString: 0.0
+		displayFolder: 2 Experience
+		lineageTag: 5311085a-7094-415d-a349-c1a2379f9c11
+
+	measure 'Avg Overage' = AVERAGE('Subscriber'[OverageMinutes])
+		formatString: #,0
+		displayFolder: 2 Experience
+		lineageTag: 1479c181-d755-4541-a843-25571173e36c
+
+	measure 'Churn Heavy Care' = CALCULATE([Churn Rate], 'Subscriber'[CareBand] = "5+ a month")
+		formatString: 0.0%
+		displayFolder: 2 Experience
+		lineageTag: b61040bf-23b5-4d4e-aed9-6afc61419399
+
+	measure 'Churn Old Handset' = CALCULATE([Churn Rate], 'Subscriber'[HandsetAgeBand] IN {"18-24 months", "24+ months"})
+		formatString: 0.0%
+		displayFolder: 2 Experience
+		lineageTag: 036941fd-60c4-4822-a795-275caa437efc
+
+	measure 'Churn New Handset' = CALCULATE([Churn Rate], 'Subscriber'[HandsetAgeBand] = "Under 6 months")
+		formatString: 0.0%
+		displayFolder: 2 Experience
+		lineageTag: 770499b0-56da-40bf-97d3-6a1658ff5e3d
+
+	/// Association only: subscribers who call the retention team are already at risk.
+	measure 'Churn Retention Callers' = CALCULATE([Churn Rate], 'Subscriber'[RetentionContact] = "Called retention team")
+		formatString: 0.0%
+		displayFolder: 2 Experience
+		lineageTag: 1ec12b2f-7dc0-477f-ab78-d90e5bd488f9
+
+	measure 'Test Subscribers' = CALCULATE([Subscribers], 'Subscriber'[Sample] = "Test")
+		formatString: #,0
+		displayFolder: 3 Model
+		lineageTag: a8240532-71bb-4c0d-820b-a8b7e6001a32
+
+	measure 'Test Churn Rate' = CALCULATE([Churn Rate], 'Subscriber'[Sample] = "Test")
+		formatString: 0.0%
+		displayFolder: 3 Model
+		lineageTag: 2c0f608a-f397-4905-ae3d-013f25710d75
+
+	measure 'Test Predicted Churn' = CALCULATE(AVERAGE('Subscriber'[ChurnScore]), 'Subscriber'[Sample] = "Test")
+		formatString: 0.0%
+		displayFolder: 3 Model
+		lineageTag: de9f1799-2e9e-4404-ac45-e7aa70cae24a
+
+	measure 'Driver Importance' = SUM('Churn Drivers'[AUCDrop])
+		formatString: 0.000
+		displayFolder: 3 Model
+		lineageTag: b277f033-bf63-4308-97ef-0e3882e6b650
+
+	measure 'Hold-out AUC' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "churn_auc_test")
+		formatString: 0.00
+		displayFolder: 9 Model metrics
+		lineageTag: 879800e1-7396-411a-b087-2d31aeb7fe93
+
+	measure 'Logistic AUC' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "churn_auc_logit")
+		formatString: 0.00
+		displayFolder: 9 Model metrics
+		lineageTag: 79cf3ef0-5e2c-494d-bbf2-a4c69c4f0f99
+
+	measure 'Top Decile Churn' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "churn_top_decile_rate")
+		formatString: 0%
+		displayFolder: 9 Model metrics
+		lineageTag: dce945e1-d3e6-41a3-84eb-b490375615cc
+
+	measure 'Top Decile Lift' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "churn_top_decile_lift")
+		formatString: 0.0"x"
+		displayFolder: 9 Model metrics
+		lineageTag: 7b8720fb-e4da-448c-86bf-6c0f7f69378e
+
+	/// Share of hold-out churners in the riskiest 30%.
+	measure 'Top 30 Churner Capture' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "churn_top_30_capture")
+		formatString: 0%
+		displayFolder: 9 Model metrics
+		lineageTag: 3612d502-c15d-4a5a-843d-de790851c97e
+
+	/// Share of churned revenue in the top 30% ranked by revenue at risk.
+	measure 'Revenue Capture by Value' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "revenue_top_30_capture_by_value")
+		formatString: 0%
+		displayFolder: 9 Model metrics
+		lineageTag: 0da1e690-a430-4dc4-8a65-786950a57491
+
+	/// Share of churned revenue in the top 30% ranked by churn risk.
+	measure 'Revenue Capture by Risk' = LOOKUPVALUE('Model Metrics'[Value], 'Model Metrics'[Metric], "revenue_top_30_capture_by_risk")
+		formatString: 0%
+		displayFolder: 9 Model metrics
+		lineageTag: b66012b2-51e6-46f0-91b0-9ee3b6f17f1e
+
+	measure 'Share Value' = SELECTEDVALUE('Target Share'[Target Share], 30)
+		formatString: 0"%"
+		displayFolder: 4 Retention economics
+		lineageTag: 2bfa67e9-458e-4df0-bbe9-ef158fcee190
+
+	measure 'Offer Cost Value' = SELECTEDVALUE('Offer Cost'[Offer Cost], 25)
+		formatString: $0
+		displayFolder: 4 Retention economics
+		lineageTag: 62156c9b-711d-44a6-82ec-87484e750a35
+
+	measure 'Save Rate Value' = SELECTEDVALUE('Save Rate'[Save Rate], 0.2)
+		formatString: 0%
+		displayFolder: 4 Retention economics
+		lineageTag: 1edd4a0d-d0d4-4107-8032-79cd59cda552
+
+	measure 'Ranking Value' = SELECTEDVALUE('Ranking'[Ranking], "By revenue at risk")
+		displayFolder: 4 Retention economics
+		lineageTag: f50e0b6b-1244-4c19-8af1-25bf44a0e877
+
+	/// Hold-out subscribers offered a deal.
+	measure Targeted =
+			VAR _k = [Share Value] / 10
+			VAR _byValue = [Ranking Value] = "By revenue at risk"
+			VAR _in = FILTER('Subscriber', 'Subscriber'[Sample] = "Test" && IF(_byValue, 'Subscriber'[ValueDecile], 'Subscriber'[RiskDecile]) <= _k)
+			RETURN COUNTROWS(_in)
+		formatString: #,0
+		displayFolder: 4 Retention economics
+		lineageTag: 1aa9b7bd-811e-41d2-a267-61e53e93db40
+
+	/// Targeted subscribers who went on to churn (backtest).
+	measure 'Churners Reached' =
+			VAR _k = [Share Value] / 10
+			VAR _byValue = [Ranking Value] = "By revenue at risk"
+			VAR _in = FILTER('Subscriber', 'Subscriber'[Sample] = "Test" && IF(_byValue, 'Subscriber'[ValueDecile], 'Subscriber'[RiskDecile]) <= _k)
+			RETURN SUMX(_in, 'Subscriber'[Churned])
+		formatString: #,0
+		displayFolder: 4 Retention economics
+		lineageTag: 6be19757-b1b6-4d5b-9c56-909be0fef56d
+
+	measure Saves = [Churners Reached] * [Save Rate Value]
+		formatString: #,0
+		displayFolder: 4 Retention economics
+		lineageTag: e197085c-f48c-4003-9db1-f2a7055a0b68
+
+	/// 12 months of revenue from saved churners.
+	measure 'Revenue Retained' =
+			VAR _k = [Share Value] / 10
+			VAR _byValue = [Ranking Value] = "By revenue at risk"
+			VAR _in = FILTER('Subscriber', 'Subscriber'[Sample] = "Test" && IF(_byValue, 'Subscriber'[ValueDecile], 'Subscriber'[RiskDecile]) <= _k)
+			RETURN SUMX(FILTER(_in, 'Subscriber'[Churned] = 1), 'Subscriber'[MonthlyRevenue]) * [Save Rate Value] * 12
+		formatString: $#,0
+		displayFolder: 4 Retention economics
+		lineageTag: 30a18dc1-b492-4b6d-ba5c-8aef939ca42a
+
+	measure 'Offer Spend' = [Targeted] * [Offer Cost Value]
+		formatString: $#,0
+		displayFolder: 4 Retention economics
+		lineageTag: 53b57287-39af-494c-88b1-799cfff03b6c
+
+	/// Revenue retained minus offer spend, hold-out base.
+	measure 'Net Value' = [Revenue Retained] - [Offer Spend]
+		formatString: $#,0;-$#,0
+		displayFolder: 4 Retention economics
+		lineageTag: 4b22e38b-2c5a-4790-a0ec-9141813beac7
+
+	measure 'Retention ROI' = DIVIDE([Net Value], [Offer Spend])
+		formatString: 0%
+		displayFolder: 4 Retention economics
+		lineageTag: a867a610-ec10-428c-85b7-c6d934b09745
+
+	measure 'Net by Value Ranking' =
+			VAR _k = SELECTEDVALUE('Share Axis'[Share Axis]) / 10
+			VAR _byValue = "By revenue at risk" = "By revenue at risk"
+			VAR _in = FILTER('Subscriber', 'Subscriber'[Sample] = "Test" && IF(_byValue, 'Subscriber'[ValueDecile], 'Subscriber'[RiskDecile]) <= _k)
+			RETURN SUMX(FILTER(_in, 'Subscriber'[Churned] = 1), 'Subscriber'[MonthlyRevenue]) * [Save Rate Value] * 12 - COUNTROWS(_in) * [Offer Cost Value]
+		formatString: $#,0;-$#,0
+		displayFolder: 4 Retention economics
+		lineageTag: ce1137bf-c2d1-40e1-a2e2-a7e2b63bd350
+
+	measure 'Net by Risk Ranking' =
+			VAR _k = SELECTEDVALUE('Share Axis'[Share Axis]) / 10
+			VAR _byValue = "By churn risk" = "By revenue at risk"
+			VAR _in = FILTER('Subscriber', 'Subscriber'[Sample] = "Test" && IF(_byValue, 'Subscriber'[ValueDecile], 'Subscriber'[RiskDecile]) <= _k)
+			RETURN SUMX(FILTER(_in, 'Subscriber'[Churned] = 1), 'Subscriber'[MonthlyRevenue]) * [Save Rate Value] * 12 - COUNTROWS(_in) * [Offer Cost Value]
+		formatString: $#,0;-$#,0
+		displayFolder: 4 Retention economics
+		lineageTag: 0168d9aa-01fd-49d2-9371-3de9f63ce025
+
+	/// Target share with the highest net value under the chosen assumptions.
+	measure 'Best Share' =
+			VAR _t = ADDCOLUMNS(ALL('Share Axis'[Share Axis]), "@n", IF([Ranking Value] = "By revenue at risk", [Net by Value Ranking], [Net by Risk Ranking]))
+			RETURN MAXX(TOPN(1, _t, [@n], DESC), 'Share Axis'[Share Axis])
+		formatString: 0"%"
+		displayFolder: 4 Retention economics
+		lineageTag: af6f1256-f6c9-419d-af05-dd1d8a2a68b6
+
+	column Value
+		dataType: string
+		isHidden
+		lineageTag: d5d25879-6eff-4c3e-807b-389745b9aa0b
+		summarizeBy: none
+		sourceColumn: [Value]
+
+	partition KPI = calculated
+		mode: import
+		source = {BLANK()}
+

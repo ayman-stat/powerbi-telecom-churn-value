@@ -1,0 +1,243 @@
+/// Fact and dimension in one: 51,047 subscribers of a US wireless carrier (Cell2Cell, anonymised).
+table Subscriber
+	lineageTag: d3d4b526-866e-4fca-b796-8d488e26f740
+
+	column SubscriberKey
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 27739e49-afc8-4d11-a6cb-4ddeea5a03ab
+		summarizeBy: none
+		sourceColumn: SubscriberKey
+
+	column Churned
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b5bd09fa-f510-44ea-82d0-dceb04156608
+		summarizeBy: none
+		sourceColumn: Churned
+
+	column MonthlyRevenue
+		dataType: double
+		isHidden
+		formatString: $#,0.00
+		lineageTag: 51355f7a-8426-45af-af94-d260be55583c
+		summarizeBy: none
+		sourceColumn: MonthlyRevenue
+
+	column MonthlyMinutes
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 06cb4cfe-5241-441e-96a0-0f85177c36ed
+		summarizeBy: none
+		sourceColumn: MonthlyMinutes
+
+	column OverageMinutes
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 242d5c3e-1bd8-4010-8b1d-7f9469d5d183
+		summarizeBy: none
+		sourceColumn: OverageMinutes
+
+	column CustomerCareCalls
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 78aeeace-4b13-4dd4-8fd7-83cfe845509b
+		summarizeBy: none
+		sourceColumn: CustomerCareCalls
+
+	column DroppedBlockedCalls
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 0b4d055a-2be7-4116-9452-4fb6bbb096f8
+		summarizeBy: none
+		sourceColumn: DroppedBlockedCalls
+
+	column MonthsInService
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8f3ac1a8-90e6-4754-8661-0ffd791d671d
+		summarizeBy: none
+		sourceColumn: MonthsInService
+
+	column CurrentEquipmentDays
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 0a221276-372f-48e3-8501-fa60aaa097f5
+		summarizeBy: none
+		sourceColumn: CurrentEquipmentDays
+
+	column HandsetPrice
+		dataType: double
+		isHidden
+		formatString: $#,0
+		lineageTag: abae709d-d372-4d8a-a9b8-ea754965c541
+		summarizeBy: none
+		sourceColumn: HandsetPrice
+
+	/// Months in service
+	column TenureBand
+		dataType: string
+		lineageTag: f252ff31-601a-443f-90b0-82ea5f63930e
+		summarizeBy: none
+		sourceColumn: TenureBand
+		sortByColumn: TenureBandOrder
+
+	column TenureBandOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 06f4ed09-cbe1-4e9c-a064-a0daffab76d8
+		summarizeBy: none
+		sourceColumn: TenureBandOrder
+
+	/// Age of the current handset
+	column HandsetAgeBand
+		dataType: string
+		lineageTag: 2321834e-25f8-4ad7-aba3-47ff3713569b
+		summarizeBy: none
+		sourceColumn: HandsetAgeBand
+		sortByColumn: HandsetAgeBandOrder
+
+	column HandsetAgeBandOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a04605e0-0ae3-450d-a9cd-1f7e8a97c5f2
+		summarizeBy: none
+		sourceColumn: HandsetAgeBandOrder
+
+	/// Monthly revenue
+	column ARPUBand
+		dataType: string
+		lineageTag: 02e11898-9b47-47be-ab88-2be63913c9cf
+		summarizeBy: none
+		sourceColumn: ARPUBand
+		sortByColumn: ARPUBandOrder
+
+	column ARPUBandOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2a123a3d-a41c-4392-a5ec-9d83b16903fb
+		summarizeBy: none
+		sourceColumn: ARPUBandOrder
+
+	/// Customer-care calls per month
+	column CareBand
+		dataType: string
+		lineageTag: 119b0510-d6b1-4110-a706-0ac3db56bd53
+		summarizeBy: none
+		sourceColumn: CareBand
+		sortByColumn: CareBandOrder
+
+	column CareBandOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2480561a-be30-49f7-b85b-be74a1d7b80d
+		summarizeBy: none
+		sourceColumn: CareBandOrder
+
+	/// Dropped or blocked calls per month
+	column DropBand
+		dataType: string
+		lineageTag: 4cc9870e-8acc-472d-bbdc-5729c5ddedba
+		summarizeBy: none
+		sourceColumn: DropBand
+		sortByColumn: DropBandOrder
+
+	column DropBandOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ac82179c-79d2-4829-b2ac-5b1b0e15beb4
+		summarizeBy: none
+		sourceColumn: DropBandOrder
+
+	/// Change in minutes of use
+	column UsageTrend
+		dataType: string
+		lineageTag: d00be0a4-94ed-4a85-bf8b-1f4ece0ef1a9
+		summarizeBy: none
+		sourceColumn: UsageTrend
+		sortByColumn: UsageTrendOrder
+
+	column UsageTrendOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5b814cc4-dc19-48fd-a640-adb11ffe2bf4
+		summarizeBy: none
+		sourceColumn: UsageTrendOrder
+
+	/// Service-area code (first three letters)
+	column Market
+		dataType: string
+		lineageTag: 86c3001f-da3c-4505-8f40-7e1ec4e90c6d
+		summarizeBy: none
+		sourceColumn: Market
+
+	column RetentionContact
+		dataType: string
+		lineageTag: 132206d0-1764-442e-a845-50f283a1ea80
+		summarizeBy: none
+		sourceColumn: RetentionContact
+
+	/// Credit rating
+	column CreditClass
+		dataType: string
+		lineageTag: ee0714f2-0446-4228-8f18-ad6e958bdf8e
+		summarizeBy: none
+		sourceColumn: CreditClass
+
+	column ChurnScore
+		dataType: double
+		isHidden
+		formatString: 0.0%
+		lineageTag: 433002be-f344-4a9b-9378-e4f1b47d0b4a
+		summarizeBy: none
+		sourceColumn: ChurnScore
+
+	/// Train (70%) or hold-out Test (30%)
+	column Sample
+		dataType: string
+		lineageTag: c7af1b31-f9a1-45c2-afc2-a58999a2a123
+		summarizeBy: none
+		sourceColumn: Sample
+
+	/// Hold-out only: 1 = highest churn risk
+	column RiskDecile
+		dataType: double
+		formatString: 0
+		lineageTag: cbbb4e1d-8d01-4d65-bd0a-31573e524629
+		summarizeBy: none
+		sourceColumn: RiskDecile
+
+	/// Hold-out only: 1 = highest revenue at risk
+	column ValueDecile
+		dataType: double
+		formatString: 0
+		lineageTag: 37601b86-a2b8-49be-b487-c092ee87d7ff
+		summarizeBy: none
+		sourceColumn: ValueDecile
+
+	partition Subscriber = m
+		mode: import
+		source =
+				let
+				    Source = fnLoadCsv("fact_subscriber.csv"),
+				    Typed = Table.TransformColumnTypes(Source, {{"SubscriberKey", Int64.Type}, {"Churned", Int64.Type}, {"MonthlyRevenue", type number}, {"MonthlyMinutes", type number}, {"OverageMinutes", type number}, {"CustomerCareCalls", type number}, {"DroppedBlockedCalls", type number}, {"MonthsInService", Int64.Type}, {"CurrentEquipmentDays", type number}, {"HandsetPrice", type number}, {"TenureBand", type text}, {"TenureBandOrder", Int64.Type}, {"HandsetAgeBand", type text}, {"HandsetAgeBandOrder", Int64.Type}, {"ARPUBand", type text}, {"ARPUBandOrder", Int64.Type}, {"CareBand", type text}, {"CareBandOrder", Int64.Type}, {"DropBand", type text}, {"DropBandOrder", Int64.Type}, {"UsageTrend", type text}, {"UsageTrendOrder", Int64.Type}, {"Market", type text}, {"RetentionContact", type text}, {"CreditClass", type text}, {"ChurnScore", type number}, {"Sample", type text}, {"RiskDecile", type number}, {"ValueDecile", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

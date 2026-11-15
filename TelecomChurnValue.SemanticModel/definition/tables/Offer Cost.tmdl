@@ -1,0 +1,15 @@
+table 'Offer Cost'
+	lineageTag: ef3f0020-fa0c-4f4c-95a9-390b0b53c361
+
+	/// Cost of one retention offer, USD
+	column 'Offer Cost'
+		dataType: int64
+		formatString: $0
+		lineageTag: 003fa1fb-b43c-471a-b96d-2bde21cb5962
+		summarizeBy: none
+		sourceColumn: [Offer Cost]
+
+	partition 'Offer Cost' = calculated
+		mode: import
+		source = DATATABLE("Offer Cost", INTEGER, {{10}, {25}, {50}, {100}})
+

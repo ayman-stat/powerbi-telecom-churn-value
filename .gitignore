@@ -1,0 +1,6 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+.raw/
+__pycache__/
+*.pyc
+data/*.csv

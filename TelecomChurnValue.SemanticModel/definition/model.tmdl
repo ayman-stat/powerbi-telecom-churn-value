@@ -1,0 +1,26 @@
+/// Telecom Churn & Subscriber Value: 51,047 subscribers of a US wireless carrier (Cell2Cell), churn model scores and a retention simulator.
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+
+ref table Subscriber
+ref table 'Churn Drivers'
+ref table 'Model Metrics'
+ref table 'Target Share'
+ref table 'Share Axis'
+ref table 'Offer Cost'
+ref table 'Save Rate'
+ref table Ranking
+ref table KPI
+
+ref cultureInfo en-US
+
