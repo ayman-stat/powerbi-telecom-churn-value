@@ -1,5 +1,7 @@
 # Telecom Churn & Subscriber Value
 
+[![ci](https://github.com/ayman-stat/powerbi-telecom-churn-value/actions/workflows/ci.yml/badge.svg)](https://github.com/ayman-stat/powerbi-telecom-churn-value/actions/workflows/ci.yml)
+
 How a mobile operator's CVM team decides who gets a retention offer: churn drivers, a churn model and a retention-economics simulator on 51K real subscribers.
 
 **Domain:** Telecom / CVM  ·  **Built with:** Power BI Desktop (PBIP, PBIR, TMDL), DAX, Python  ·  **Author:** [Mohamed Ayman](https://mohamedaymanstat.vercel.app)
