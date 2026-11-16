@@ -1,0 +1,14 @@
+[tool.ruff]
+line-length = 150
+target-version = "py312"
+extend-exclude = ["build", "etl", "*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E402", "E731", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"ds/notebooks/*.py" = ["E501", "E401", "E702", "E703", "B018", "F401", "I001"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

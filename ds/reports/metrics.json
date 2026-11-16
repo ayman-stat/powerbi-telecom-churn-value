@@ -1,0 +1,383 @@
+{
+  "01_eda": {
+    "subscribers": 51047,
+    "churn_rate_sample": 0.288185,
+    "assumed_monthly_churn": 0.02,
+    "churn_by_tenure": {
+      "Under 12 months": 0.240273,
+      "12-17 months": 0.336021,
+      "18-23 months": 0.294919,
+      "24-35 months": 0.29144,
+      "36+ months": 0.274141
+    },
+    "churn_old_vs_new_handset": [
+      0.339701,
+      0.228636
+    ],
+    "churn_retention_callers_vs_rest": [
+      0.45043,
+      0.282443
+    ],
+    "churn_usage_missing": 0.566757,
+    "high_correlation_pairs": 13,
+    "max_single_feature_auc": 0.5745
+  },
+  "03_retention_economics": {
+    "parity": {
+      "revenue_top_30_capture_by_value": {
+        "published": 0.5796,
+        "reproduced": 0.579602
+      },
+      "revenue_top_30_capture_by_risk": {
+        "published": 0.441,
+        "reproduced": 0.440958
+      }
+    },
+    "simulator_defaults_sample": {
+      "net_30_value": 234225.304,
+      "roi_30_value": 2.038958,
+      "best_share_value": 60,
+      "best_net_value": 275581.464,
+      "net_30_risk": 150718.936
+    },
+    "simulator_defaults_real_base": {
+      "net_30_value": -79773.802984,
+      "net_30_risk": -73540.798168,
+      "break_even_cost_top10_value": 9.435606
+    },
+    "ev_targeting": {
+      "2.5": {
+        "share_offered": 0.4111,
+        "subscribers_offered": 6296.0,
+        "expected_net": 14782.558743,
+        "realised_net": 14500.595497,
+        "min_monthly_revenue_offered": 10.0
+      },
+      "5.0": {
+        "share_offered": 0.147568,
+        "subscribers_offered": 2260.0,
+        "expected_net": 6463.001358,
+        "realised_net": 6198.834981,
+        "min_monthly_revenue_offered": 18.84
+      },
+      "10.0": {
+        "share_offered": 0.033954,
+        "subscribers_offered": 520.0,
+        "expected_net": 1909.177337,
+        "realised_net": 1922.266472,
+        "min_monthly_revenue_offered": 34.99
+      },
+      "25.0": {
+        "share_offered": 0.001959,
+        "subscribers_offered": 30.0,
+        "expected_net": 161.61893,
+        "realised_net": 424.086294,
+        "min_monthly_revenue_offered": 124.03
+      }
+    },
+    "tornado_base_top10_5usd": 5835.728748,
+    "tornado": {
+      "Margin on revenue (50% - 100%)": {
+        "low": -371.274167,
+        "high": 5835.728748
+      },
+      "Offer cost ($10 - $2.5)": {
+        "low": -742.548334,
+        "high": 9124.867289
+      },
+      "Real monthly churn (1% - 3%)": {
+        "low": -330.94147,
+        "high": 12002.398966
+      },
+      "Save rate (10% - 30%)": {
+        "low": -371.274167,
+        "high": 12042.731662
+      },
+      "Months kept (6 - 18)": {
+        "low": -371.274167,
+        "high": 12042.731662
+      }
+    },
+    "monte_carlo": {
+      "5usd": {
+        "top10": {
+          "median": 1482.486426,
+          "p05": -4114.740786,
+          "p95": 13257.536758,
+          "p_loss": 0.3775
+        },
+        "top20": {
+          "median": -1421.963091,
+          "p05": -9855.575725,
+          "p95": 16883.13461,
+          "p_loss": 0.5645
+        },
+        "top30": {
+          "median": -5150.50331,
+          "p05": -15943.025127,
+          "p95": 18189.27686,
+          "p_loss": 0.671
+        },
+        "top40": {
+          "median": -9783.446194,
+          "p05": -22421.969357,
+          "p95": 17318.491405,
+          "p_loss": 0.7435
+        },
+        "top50": {
+          "median": -14724.577114,
+          "p05": -28979.374262,
+          "p95": 16000.837328,
+          "p_loss": 0.804
+        },
+        "top60": {
+          "median": -20583.286599,
+          "p05": -36139.299159,
+          "p95": 12936.591282,
+          "p_loss": 0.8585
+        },
+        "top70": {
+          "median": -26657.413101,
+          "p05": -43354.681778,
+          "p95": 9146.967036,
+          "p_loss": 0.8965
+        },
+        "top80": {
+          "median": -33615.652619,
+          "p05": -51091.14753,
+          "p95": 4071.048088,
+          "p_loss": 0.934
+        },
+        "top90": {
+          "median": -41363.411968,
+          "p05": -59339.757337,
+          "p95": -2426.66046,
+          "p_loss": 0.9545
+        },
+        "top100": {
+          "median": -49490.551657,
+          "p05": -68065.302422,
+          "p95": -9853.791697,
+          "p_loss": 0.9675
+        }
+      },
+      "10usd": {
+        "top10": {
+          "median": -5075.732798,
+          "p05": -10721.948998,
+          "p95": 6815.122586,
+          "p_loss": 0.782
+        },
+        "top20": {
+          "median": -15022.228454,
+          "p05": -23558.36516,
+          "p95": 3269.404762,
+          "p_loss": 0.924
+        },
+        "top30": {
+          "median": -25914.062327,
+          "p05": -36773.127823,
+          "p95": -2538.586918,
+          "p_loss": 0.9605
+        },
+        "top40": {
+          "median": -37952.337604,
+          "p05": -50726.857388,
+          "p95": -10807.942343,
+          "p_loss": 0.979
+        },
+        "top50": {
+          "median": -50232.880458,
+          "p05": -64578.723014,
+          "p95": -19661.001609,
+          "p_loss": 0.987
+        },
+        "top60": {
+          "median": -63875.423943,
+          "p05": -79586.038888,
+          "p95": -30548.847475,
+          "p_loss": 0.994
+        },
+        "top70": {
+          "median": -77541.911554,
+          "p05": -94311.980788,
+          "p95": -42007.922241,
+          "p_loss": 0.996
+        },
+        "top80": {
+          "median": -92716.332217,
+          "p05": -110509.71428,
+          "p95": -55126.329667,
+          "p_loss": 0.998
+        },
+        "top90": {
+          "median": -109118.038479,
+          "p05": -127357.910656,
+          "p95": -70053.133705,
+          "p_loss": 0.999
+        },
+        "top100": {
+          "median": -125972.056061,
+          "p05": -144509.276158,
+          "p95": -86105.567673,
+          "p_loss": 0.9995
+        }
+      }
+    },
+    "ab_test": {
+      "churn_top10_real": 0.032017,
+      "per_arm_at_20pct_save": 10682
+    }
+  },
+  "02_churn_model": {
+    "parity": {
+      "churn_auc_test": {
+        "published": 0.6722,
+        "reproduced": 0.672234
+      },
+      "churn_auc_train": {
+        "published": 0.7403,
+        "reproduced": 0.740317
+      },
+      "churn_auc_logit": {
+        "published": 0.6011,
+        "reproduced": 0.601061
+      },
+      "churn_top_decile_rate": {
+        "published": 0.5385,
+        "reproduced": 0.538512
+      },
+      "churn_top_decile_lift": {
+        "published": 1.87,
+        "reproduced": 1.868443
+      },
+      "churn_top_30_capture": {
+        "published": 0.4588,
+        "reproduced": 0.458768
+      }
+    },
+    "test_auc": {
+      "Rule: handset age": {
+        "auc": 0.5724,
+        "ci": [
+          0.563,
+          0.582
+        ]
+      },
+      "ETL logistic (as published)": {
+        "auc": 0.6011,
+        "ci": [
+          0.592,
+          0.611
+        ]
+      },
+      "Logistic pipeline (C=0.03)": {
+        "auc": 0.6208,
+        "ci": [
+          0.611,
+          0.63
+        ]
+      },
+      "Champion (production GBM)": {
+        "auc": 0.6722,
+        "ci": [
+          0.664,
+          0.681
+        ]
+      },
+      "Challenger (tuned LightGBM)": {
+        "auc": 0.6823,
+        "ci": [
+          0.674,
+          0.692
+        ]
+      }
+    },
+    "cv_auc_mean": {
+      "Rule: handset age": 0.5754,
+      "ETL logistic (as published)": 0.6087,
+      "Logistic pipeline (C=0.03)": 0.6287,
+      "Champion (production GBM)": 0.6748,
+      "Challenger (tuned LightGBM)": 0.6877
+    },
+    "paired_tests": {
+      "Challenger (tuned LightGBM) vs Champion (production GBM)": {
+        "delta_auc": 0.010089,
+        "ci_low": 0.006247,
+        "ci_high": 0.014043,
+        "p_value_one_sided": 0.0
+      },
+      "Champion (production GBM) vs Logistic pipeline (C=0.03)": {
+        "delta_auc": 0.051389,
+        "ci_low": 0.042967,
+        "ci_high": 0.06006,
+        "p_value_one_sided": 0.0
+      },
+      "Challenger (tuned LightGBM) vs Logistic pipeline (C=0.03)": {
+        "delta_auc": 0.061479,
+        "ci_low": 0.053028,
+        "ci_high": 0.069898,
+        "p_value_one_sided": 0.0
+      },
+      "Logistic pipeline (C=0.03) vs ETL logistic (as published)": {
+        "delta_auc": 0.019783,
+        "ci_low": 0.012658,
+        "ci_high": 0.026604,
+        "p_value_one_sided": 0.0
+      },
+      "Champion (production GBM) vs Rule: handset age": {
+        "delta_auc": 0.099879,
+        "ci_low": 0.088548,
+        "ci_high": 0.110028,
+        "p_value_one_sided": 0.0
+      }
+    },
+    "lift": {
+      "Rule: handset age": {
+        "top_decile_churn": 0.347258,
+        "top_decile_lift": 1.204863,
+        "top_30_capture": 0.344585
+      },
+      "ETL logistic (as published)": {
+        "top_decile_churn": 0.422324,
+        "top_decile_lift": 1.465312,
+        "top_30_capture": 0.385818
+      },
+      "Logistic pipeline (C=0.03)": {
+        "top_decile_churn": 0.464099,
+        "top_decile_lift": 1.610258,
+        "top_30_capture": 0.409606
+      },
+      "Champion (production GBM)": {
+        "top_decile_churn": 0.538512,
+        "top_decile_lift": 1.868443,
+        "top_30_capture": 0.458768
+      },
+      "Challenger (tuned LightGBM)": {
+        "top_decile_churn": 0.560052,
+        "top_decile_lift": 1.943181,
+        "top_30_capture": 0.468283
+      }
+    },
+    "prior_correction": {
+      "assumed_monthly_churn": 0.02,
+      "top_decile_population_rate": 0.05555,
+      "top_decile_predicted_population": 0.05722
+    },
+    "leakage_sensitivity": {
+      "Without retention-contact fields": {
+        "delta_auc": -0.00212,
+        "ci_low": -0.00447,
+        "ci_high": 0.000332,
+        "p_value_one_sided": 0.958
+      },
+      "Without the blank-usage signal": {
+        "delta_auc": -0.000683,
+        "ci_low": -0.002441,
+        "ci_high": 0.001284,
+        "p_value_one_sided": 0.762
+      }
+    },
+    "learning_curve_last_gain": 0.00706
+  }
+}

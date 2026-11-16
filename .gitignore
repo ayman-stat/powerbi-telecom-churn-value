@@ -4,3 +4,6 @@
 __pycache__/
 *.pyc
 data/*.csv
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
